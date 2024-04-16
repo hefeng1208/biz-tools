@@ -1,5 +1,5 @@
 {
-  "name": "biz-tools/cli",
+  "name": "biz-tools-cli",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -26,5 +26,8 @@
     "joycon": "^3.1.1",
     "minimist": "^1.2.8",
     "rollup": "^4.14.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
