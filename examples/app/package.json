@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "biz-tool-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "biz-tools/cli": "workspace:*"
+    "biz-tools-cli": "workspace:*"
   }
 }
