@@ -5,5 +5,7 @@
     "biz-tool-app": "1.0.0",
     "biz-tools-cli": "0.0.1"
   },
-  "changesets": []
+  "changesets": [
+    "metal-bulldogs-clap"
+  ]
 }
