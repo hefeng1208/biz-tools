@@ -23,18 +23,24 @@ const getConfig = async (cliOptions = {}) => {
 
   const config = {
     // 如果不配置默认扫描src/api目录
-    dir: {
-      path: resolve(process.cwd(), './src/api'),
+    scan: {
+      dir: resolve(process.cwd(), './src/api'),
       prefix: '',
       outputFileName: 'output',
       targetFnName: 'openApi',
       scanExtNames: ['.js']
+    },
+    gen: {
+      branch: 'next',
+      envPrefix: ['JDCLOUD', 'UAS', 'SERVER_HA', 'SUB_PATH'],
+      gitRepoUrl: 'https://coding.jd.com/jdcloud-fe/egg-console.git'
     }
   }
-
-  if (path) Object.assign(config, data, cliOptions)
-  Object.assign(config, cliOptions || {})
-  return config
+  const commandName = cliOptions.commandName
+  const commandConfig = config[commandName]
+  if (path) Object.assign(commandConfig, data[commandName] || {}, cliOptions)
+  Object.assign(commandConfig, cliOptions || {})
+  return commandConfig
 }
 module.exports = {
   getConfig

@@ -1,7 +1,7 @@
 const terser = require('@rollup/plugin-terser'); // 引入 terser 插件
 
 module.exports =  {
-  input: 'src/index.js',
+  input: './src/index.js',
   output: {
     file: 'dist/index.js',
     format: 'cjs',

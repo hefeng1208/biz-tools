@@ -8,7 +8,7 @@ const parseAst = require('./parseEggAst')
 const logger = new Log({ scope: 'egg-console-parser' })
 module.exports = async (config) => {
   try {
-    const { dir: { path: dirPath, outputFileName, targetFnName, scanExtNames } } = config
+    const { dir: dirPath, outputFileName, targetFnName, scanExtNames } = config
     const outputFilePath = path.resolve(process.cwd(), `${dirPath}/${outputFileName}.json`)
     const results = []
     async function traverseFolder(folderPath) {
